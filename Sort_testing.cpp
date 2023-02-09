@@ -1,4 +1,6 @@
-﻿#include <chrono>
+﻿/*Программа сравнения скорости разных методов сортировки*/
+
+#include <chrono>
 
 #include <algorithm>
 #include <iostream>
