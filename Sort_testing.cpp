@@ -8,7 +8,7 @@
 void randArray(float array[], int size)
 {
 	for (int i = 0; i < size; i++) {
-		array[i] = rand();
+		array[i] = i;
 	}
 
 }
@@ -73,26 +73,10 @@ void bubbleSort(float array[], int size)
 		b = false;
 		for (int i = 0; i < size - 1; i++)
 		{
-			if (array[i] < array[i + 1])
+			if (array[i] > array[i + 1])
 			{
 				std::swap(array[i], array[i + 1]);
 				b = true;
-			}
-		}
-	}
-}
-
-// Основная функция, выполняющая  сортировку пузырьком
-void bubbleSortMy(float arr[], int n)
-{
-	// Двойной проход по массиву
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < n - 1; j++)
-		{
-			if (arr[j] > arr[j + 1])
-			{
-				std::swap(arr[j], arr[j + 1]);
 			}
 		}
 	}
