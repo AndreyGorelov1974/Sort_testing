@@ -98,6 +98,22 @@ void bubbleSortMy(float arr[], int n)
 	}
 }
 
+// Основная функция, выполняющая  сортировку пузырьком
+void bubbleSortMy(float arr[], int n)
+{
+	// Двойной проход по массиву
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n - 1; j++)
+		{
+			if (arr[j] > arr[j + 1])
+			{
+				std::swap(arr[j], arr[j + 1]);
+			}
+		}
+	}
+}
+
 void shakeSort(float array[], int size)
 {
 	bool b = true;
@@ -163,6 +179,14 @@ int main()
 		auto start = std::chrono::system_clock::now();
 		bubbleSort(numbers, r);
 		std::cout << "bubbleSort - " << std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - start).count() << std::endl;
+	}
+
+
+	{
+		randArray(numbers, r);
+		auto start = std::chrono::system_clock::now();
+		bubbleSortMy(numbers, r);
+		std::cout << "bubbleSortMy - " << std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - start).count() << std::endl;
 	}
 
 	{
